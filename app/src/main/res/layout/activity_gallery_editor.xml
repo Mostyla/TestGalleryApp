@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.activity.GalleryEditorActivity">
+
+
+    <View
+        android:id="@+id/headerViewMainActivity"
+        android:layout_width="0dp"
+        android:layout_height="80dp"
+        android:background="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/headerTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/urbanist"
+        android:text="@string/image"
+        android:textColor="#47484C"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/headerViewMainActivity"
+        app:layout_constraintEnd_toEndOf="@+id/headerViewMainActivity"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/headerViewMainActivity"
+        app:layout_constraintTop_toTopOf="@+id/headerViewMainActivity" />
+
+    <ImageButton
+        android:id="@+id/imageBtnBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="60dp"
+        android:background="@null"
+        app:layout_constraintBottom_toBottomOf="@+id/headerTextView"
+        app:layout_constraintEnd_toStartOf="@+id/headerTextView"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/headerViewMainActivity"
+        app:layout_constraintTop_toTopOf="@+id/headerTextView"
+        app:srcCompat="@drawable/ic_back_btn" />
+
+    <ImageButton
+        android:id="@+id/imageBtnCrown"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+        android:background="@null"
+        app:layout_constraintBottom_toBottomOf="@+id/headerTextView"
+        app:layout_constraintEnd_toEndOf="@+id/headerViewMainActivity"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/headerTextView"
+        app:layout_constraintTop_toTopOf="@+id/headerTextView"
+        app:srcCompat="@drawable/ic_crown" />
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnShare"
+        android:layout_width="70dp"
+        android:layout_height="63dp"
+        android:background="@drawable/ic_editor_background_buttons"
+        android:drawableTop="@drawable/ic_share"
+        android:padding="8dp"
+        android:text="@string/share"
+        android:textAllCaps="false"
+        android:fontFamily="@font/urbanist"
+        android:textSize="14sp"
+        android:layout_marginBottom="50dp"
+        android:layout_marginEnd="230dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/editorImageCardView"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/editorImageCardView"
+        app:layout_constraintTop_toBottomOf="@+id/editorImageCardView"
+        tools:ignore="MissingConstraints" />
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnSave"
+        android:layout_width="70dp"
+        android:layout_height="63dp"
+        android:background="@drawable/ic_editor_background_buttons"
+        android:drawableTop="@drawable/ic_save"
+        android:padding="5dp"
+        android:text="@string/save"
+        android:textAllCaps="false"
+        android:fontFamily="@font/urbanist"
+        android:textSize="14sp"
+        android:layout_marginBottom="50dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/editorImageCardView"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/editorImageCardView"
+        app:layout_constraintTop_toBottomOf="@+id/editorImageCardView"
+        app:srcCompat="@drawable/ic_save" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnDelete"
+        android:layout_width="70dp"
+        android:layout_height="63dp"
+        android:background="@drawable/ic_editor_background_buttons"
+        android:drawableTop="@drawable/ic_delete"
+        android:padding="5dp"
+        android:text="@string/delete"
+        android:textAllCaps="false"
+        android:fontFamily="@font/urbanist"
+        android:textSize="14sp"
+        android:layout_marginBottom="50dp"
+        android:layout_marginStart="230dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/editorImageCardView"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/editorImageCardView"
+        app:layout_constraintTop_toBottomOf="@+id/editorImageCardView"
+        app:srcCompat="@drawable/ic_delete" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/editorImageCardView"
+        android:layout_width="310dp"
+        android:layout_height="390dp"
+        android:layout_marginBottom="150dp"
+        app:cardCornerRadius="12dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/headerViewMainActivity" >
+
+        <ImageView
+            android:id="@+id/loadedPhotoImageView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop" />
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

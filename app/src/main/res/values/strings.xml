@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">TestGalleryApp</string>
+    <string name="app_gallery">App gallery</string>
+    <string name="gallery">Gallery</string>
+    <string name="dear_user">Dear User,</string>
+    <string name="dialog_main_text">To use this App storage permission is required, please click START and allow it.</string>
+    <string name="cancel">Cancel</string>
+    <string name="start">Start</string>
+    <string name="galley">Gallery</string>
+    <string name="image">Image</string>
+    <string name="click">click</string>
+    <string name="share">Share</string>
+    <string name="save">Save</string>
+    <string name="delete">Delete</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="photos">Photos</string>
+    <string name="videos">Videos</string>
+    <string name="image_saved">Image saved!</string>
+    <string name="delete_success">Delete is Success!</string>
+    <string name="delete_error">Delete is Error</string>
+</resources>

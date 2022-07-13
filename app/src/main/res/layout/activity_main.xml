@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.activity.MainActivity">
+
+    <View
+        android:id="@+id/headerViewMainActivity"
+        android:layout_width="0dp"
+        android:layout_height="80dp"
+        android:background="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/headerTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/urbanist"
+        android:text="@string/app_gallery"
+        android:textColor="#47484C"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/headerViewMainActivity"
+        app:layout_constraintEnd_toEndOf="@+id/headerViewMainActivity"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/headerViewMainActivity"
+        app:layout_constraintTop_toTopOf="@+id/headerViewMainActivity" />
+
+    <ImageButton
+        android:id="@+id/imageBtnMenu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="60dp"
+        android:background="@null"
+        app:layout_constraintBottom_toBottomOf="@+id/headerTextView"
+        app:layout_constraintEnd_toStartOf="@+id/headerTextView"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/headerViewMainActivity"
+        app:layout_constraintTop_toTopOf="@+id/headerTextView"
+        app:srcCompat="@drawable/ic_menu" />
+
+    <ImageButton
+        android:id="@+id/imageBtnCrown"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+        android:background="@null"
+        app:layout_constraintBottom_toBottomOf="@+id/headerTextView"
+        app:layout_constraintEnd_toEndOf="@+id/headerViewMainActivity"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/headerTextView"
+        app:layout_constraintTop_toTopOf="@+id/headerTextView"
+        app:srcCompat="@drawable/ic_crown" />
+
+    <ImageView
+        android:id="@+id/imageViewRectangle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/img_main_rect" />
+
+    <TextView
+        android:id="@+id/galleryTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="6dp"
+        android:fontFamily="@font/urbanist"
+        android:text="@string/gallery"
+        android:textSize="26sp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageViewRectangle"
+        app:layout_constraintEnd_toEndOf="@+id/imageViewRectangle"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/imageViewRectangle"
+        app:layout_constraintTop_toTopOf="@+id/imageViewRectangle" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/galleryCardView"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginStart="64dp"
+        app:cardCornerRadius="15dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageViewRectangle"
+        app:layout_constraintEnd_toStartOf="@+id/galleryTextView"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/imageViewRectangle"
+        app:layout_constraintTop_toBottomOf="@+id/galleryTextView">
+
+        <LinearLayout
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_marginTop="3dp"
+            android:background="@drawable/ic_gallery">
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/vokaCardView"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginStart="5dp"
+        app:cardCornerRadius="15dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageViewRectangle"
+        app:layout_constraintStart_toEndOf="@+id/galleryCardView"
+        app:layout_constraintTop_toBottomOf="@+id/galleryTextView">
+
+        <LinearLayout
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_marginTop="3dp"
+            android:background="@drawable/ic_voka">
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cameraCardView"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginStart="5dp"
+        app:cardCornerRadius="15dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageViewRectangle"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/vokaCardView"
+        app:layout_constraintTop_toBottomOf="@+id/galleryTextView">
+
+        <LinearLayout
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_marginTop="3dp"
+            android:background="@drawable/ic_camera">
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/saveCardView"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginStart="5dp"
+        app:cardCornerRadius="15dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageViewRectangle"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/cameraCardView"
+        app:layout_constraintTop_toBottomOf="@+id/galleryTextView">
+
+        <LinearLayout
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_marginTop="3dp"
+            android:background="@drawable/ic_downloading">
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardViewDownload"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="185dp"
+        app:cardCornerRadius="30dp"
+        app:cardElevation="3dp"
+        app:layout_constraintBottom_toTopOf="@+id/imageViewRectangle"
+        app:layout_constraintEnd_toEndOf="@+id/imageViewRectangle"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/imageViewRectangle"
+        app:layout_constraintTop_toBottomOf="@+id/headerViewMainActivity">
+
+        <LinearLayout
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:layout_marginTop="3dp"
+            android:background="@drawable/ic_download"
+            app:layout_constraintBottom_toBottomOf="@+id/imageViewRectangle"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/headerViewMainActivity">
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+
+    <!--    <ImageButton-->
+    <!--        android:id="@+id/imageView4"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_marginEnd="25dp"-->
+    <!--        android:elevation="6dp"-->
+    <!--        android:background="@null"-->
+    <!--        android:layout_marginBottom="180dp"-->
+    <!--        app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--        app:layout_constraintEnd_toEndOf="@+id/imageViewRectangle"-->
+    <!--        app:layout_constraintHorizontal_bias="0.5"-->
+    <!--        app:layout_constraintStart_toStartOf="@+id/imageViewRectangle"-->
+    <!--        app:layout_constraintTop_toBottomOf="@+id/galleryTextView"-->
+    <!--        app:srcCompat="@drawable/ic_voka" />-->
+
+    <!--    <ImageButton-->
+    <!--        android:id="@+id/imageView5"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_marginStart="50dp"-->
+    <!--        android:elevation="6dp"-->
+    <!--        android:background="@null"-->
+    <!--        android:layout_marginBottom="180dp"-->
+    <!--        app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--        app:layout_constraintEnd_toEndOf="@+id/imageViewRectangle"-->
+    <!--        app:layout_constraintHorizontal_bias="0.5"-->
+    <!--        app:layout_constraintStart_toStartOf="@+id/imageViewRectangle"-->
+    <!--        app:layout_constraintTop_toBottomOf="@+id/galleryTextView"-->
+    <!--        app:srcCompat="@drawable/ic_camera" />-->
+
+    <!--    <ImageButton-->
+    <!--        android:id="@+id/imageView6"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_marginStart="125dp"-->
+    <!--        android:elevation="10dp"-->
+    <!--        android:background="@null"-->
+    <!--        android:layout_marginBottom="180dp"-->
+    <!--        app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--        app:layout_constraintEnd_toEndOf="@+id/imageViewRectangle"-->
+    <!--        app:layout_constraintHorizontal_bias="0.5"-->
+    <!--        app:layout_constraintStart_toStartOf="@+id/imageViewRectangle"-->
+    <!--        app:layout_constraintTop_toBottomOf="@+id/galleryTextView"-->
+    <!--        app:srcCompat="@drawable/ic_downloading" />-->
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
