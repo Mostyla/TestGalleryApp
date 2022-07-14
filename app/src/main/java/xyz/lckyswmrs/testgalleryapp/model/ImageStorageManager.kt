@@ -12,21 +12,24 @@ import xyz.lckyswmrs.testgalleryapp.preferences.AppPreferences
 import java.io.File
 import java.io.FileOutputStream
 
+
 const val PATH_TO_SAVE_IMAGES = "/MyGallery"
 
 class ImageStorageManager {
 
     companion object {
 
+
+
         fun saveToInternalStorage(bitmap: Bitmap, context: Context, view: View, fileName: String) {
 
             var outputStream: FileOutputStream? = null
-            val file = Environment.getExternalStorageDirectory()
+            val file = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES)
             val path = File(file.absolutePath + PATH_TO_SAVE_IMAGES)
             path.mkdirs()
             val filename = String.format(fileName)
-            val outFile = File(path, filename)
             try {
+                val outFile = File(path, filename)
                 outputStream = FileOutputStream(outFile)
                 Toast.makeText(context, context.getString(R.string.image_saved), Toast.LENGTH_SHORT)
                     .show()
@@ -34,17 +37,21 @@ class ImageStorageManager {
                 view.visibility = View.GONE
             } catch (e: Exception) {
                 e.printStackTrace()
+                Toast.makeText(context,e.toString(),Toast.LENGTH_SHORT).show()
             }
-            bitmap.compress(Bitmap.CompressFormat.PNG, 100, outputStream)
+            Log.d("check", outputStream.toString())
+            bitmap.compress(Bitmap.CompressFormat.PNG, 100, outputStream!!)
             try {
                 outputStream!!.flush()
             } catch (e: Exception) {
                 e.printStackTrace()
+                Toast.makeText(context,e.toString(),Toast.LENGTH_SHORT).show()
             }
             try {
                 outputStream!!.close()
             } catch (e: Exception) {
                 e.printStackTrace()
+                Toast.makeText(context,e.toString(),Toast.LENGTH_SHORT).show()
             }
 
         }
